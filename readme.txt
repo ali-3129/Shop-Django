@@ -2,9 +2,6 @@ Django-admin username : sali
 
 Django-admin pass: 3129
 
-postgres_username & db-name: sali
-
-postgres_pass : 1381
 
 
 The project is developed using the Django framework, utilizing its accessible virtual environment called 'env.'
