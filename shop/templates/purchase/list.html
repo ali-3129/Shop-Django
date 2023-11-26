@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {%if purchases %}
+        {% for purchase in purchases %}
+            {{purchase.product_seller.product.name}}<br><br>
+            {{purchase.product_seller.product.upc}}<br><br>
+            {{purchase.product_seller.price}}<br><br>
+            {{purchase.product_seller.seller.user}}<br><br><br><br>
+            {{purchase.quantity}}<br><br><br><br>
+        {%endfor%}<br><br>
+
+        <a href="{%url 'pay-v' total %}"> pay </a><br><br><br>
+
+
+    {%else%}
+        <p>سبد خرید خالی است</p>
+    {%endif%}
+    total_price : {{total}}<br><br>
+
+</body>
+</html>

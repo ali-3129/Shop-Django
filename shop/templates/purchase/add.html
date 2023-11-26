@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    name: {{product.product.name|upper}}<br><br>
+    upc: {{product.product.upc|upper}}<br><br>
+    time: {{product.product.created_time|upper}}<br><br>
+    brand : {{product.product.brand|upper}}<br><br>
+    type: {{product.product.type|upper}}<br><br>
+    user: {{product.seller.user|upper}}<br><br>
+    phone: {{product.seller.phone_number}}<br><br>
+    quantity: {{product.quantity}}<br><br>
+    price: {{product.price}}$<br><br><br>
+    description: {{product.product.description}}<br><br><br><br>
+
+    <form method="post">
+        {%csrf_token%}
+        {{form.as_p}}
+        <button type="submit">save</button>
+    </form><br><br>
+
+
+</body>
+</html>

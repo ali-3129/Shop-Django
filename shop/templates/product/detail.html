@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <center>
+        sellers: <br><br><br>
+         {%for pro in product%}
+            name: {{pro.product.name}}<br><br>
+            user: {{pro.seller.user}}<br><br>
+            price: {{pro.price}}<br><br>
+            <a href="{%url 'add-purchase' pro.id%}">add</a><br><br><br>
+        _______________________________________________________________________<br><br><br>
+        {%endfor%}
+    </center>
+
+
+</body>
+</html>

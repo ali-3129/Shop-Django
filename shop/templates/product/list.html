@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {%for product in object_list%}
+        {{product.name}}<br><br>
+        {{product.brand}}<br><br>
+        {{product.get_category_display}}<br><br>
+        <a href="{% url 'detail' product.name%}" > more </a><br><br><br>
+    {%endfor%}
+
+
+</body>
+</html>
